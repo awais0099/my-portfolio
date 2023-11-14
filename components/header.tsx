@@ -12,12 +12,15 @@ export default function Header() {
         animate={{y: 0, x: "-50%", opacity: 1}}
         >
         </motion.div>
-            <nav className='flex fixed sm:top-[2.2rem] h-[initial] left-1/2 -translate-x-1/2'>
+            <nav className='flex fixed item-center justify-center top-0 sm:top-[2.1rem] h-[initial] left-1/2 -translate-x-1/2'>
                 <ul className='list-none m-0 p-0 flex gap-x-1 items-center justify-center text-[0.9rem] font-medium sm:w-[initial] flex-wrap sm:flex-nowrap w-[22rem]'>
                     {links.map((link) => (
-                        <li key={link.name}>
-                            <Link href={link.hash} className='flex items-center decoration-none px-4 py-2 hover:text-gray-950 w-full'>{link.name}</Link>
-                        </li>
+                        <motion.li key={link.name}
+                        initial={{y: "-100", opacity: 0}}
+                        animate={{y: 0, opacity: 1}}   
+                        >
+                            <Link href={link.hash} className='flex items-center decoration-none px-5 py-2 hover:text-gray-950'>{link.name}</Link>
+                        </motion.li>
                     ))}
                 </ul>
             </nav>
