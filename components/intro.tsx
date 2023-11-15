@@ -50,24 +50,22 @@ export default function Intro() {
           <span className='font-bold'>Hello, I am Awais.</span> I am <span className='font-bold'>full-stack web developer</span> with <span className='font-bold'>2+ years</span> of experience. I enjoy building <span className='italic'>sites and apps.</span> My focus is <span className='underline'>front-end React</span> <span className='underline'>(Next.js).</span>
         </motion.p>
       </div>
-      <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 mt-8'
+      <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2 mt-8'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
         }}
       >
-        <Link href="#contact" className='group bg-gray-950 text-white px-4 py-2 rounded-full outline-none focus:scale-110 hover:bg-gray-800 active:scale-105 transition'>
+        <Link href="#contact" className='group bg-gray-950 text-white px-4 py-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-800 active:scale-105 transition'>
           Contact me here <BsArrowRightShort className="inline opacity-70 group-hover:scale-x-1 transition" />
         </Link>
-        <a href="/CV.pdf" className='group bg-white px-5 py-2 rounded-full outline-none focus:scale-110' download>
+        <a href="/CV.pdf" className='group bg-white-900 border border-black/10 px-5 py-2 rounded-full outline-none focus:scale-110 hover:scale-110 transition' download={true}>
           Download CV
           <LiaDownloadSolid className='inline ml-1 group-hover:scale-y-1' />
         </a>
-        <div className='flex gap-1'>
-          <Link href="#" target='_blank' className='group flex justify-center items-center ml-2 text-center bg-white rounded-full w-[48px] h-[48px]active:scale-105 outline-none focus:scale-110'><FaLinkedin className="inline h-[18px] w-[18px] group-hover:text-gray-800"/></Link>
-          <Link href="#" target='_blank' className='group flex justify-center items-center bg-white text-center rounded-full w-[48px] h-[48px] active:scale-105 outline-none focus:scale-110'><FaGithubSquare className="inline h-[18px] w-[18px] group-hover:text-gray-800" /></Link>
-        </div>
+        <Link href="#" target='_blank' className='group flex justify-center items-center sm:ml-2 text-center hover:scale-[1.15] transition border border-black/10 bg-white rounded-full w-[48px] h-[48px] active:scale-105 outline-none focus:scale-110'><FaLinkedin className="inline h-[18px] w-[18px] group-hover:text-gray-800"/></Link>
+        <Link href="#" target='_blank' className='group flex justify-center items-center bg-white text-center hover:scale-[1.15] transition border border-black/10 rounded-full w-[48px] h-[48px] active:scale-105 outline-none focus:scale-110'><FaGithubSquare className="inline h-[18px] w-[18px] group-hover:text-gray-800" /></Link>
       </motion.div>
     </section>
   )
