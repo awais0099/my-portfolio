@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 export default function Intro() {
   return (
-    <section className='max-w-[50rem]'>
+    <section className='max-w-[50rem] scroll-mt-[100rem]' id='home'>
       <div className='flex justify-center'>
         <div className='relative'>
             <motion.div

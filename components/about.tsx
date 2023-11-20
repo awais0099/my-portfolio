@@ -5,12 +5,14 @@ import React from 'react';
 
 export default function About() {
   return (
-    <motion.section className='max-w-[50rem] text-center mb-28'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0}}
-        transition={{
-            delay: 0.175
-        }}
+    <motion.section
+      className='max-w-[50rem] text-center mb-28 scroll-mt-28'
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0}}
+      transition={{
+        delay: 0.175
+      }}
+      id='about'
     >
         <h2 className='text-3xl font-medium mb-4 capitalize'>About Me</h2>
         <p className='leading-7 my-6'>
