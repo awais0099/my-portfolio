@@ -8,9 +8,7 @@ import { ActiveSectionContext } from '@/store/store';
 
 export default function Header() {
     const ActiveSectionContextObj = useContext(ActiveSectionContext);
-
-    console.log(ActiveSectionContextObj);
-
+    
   return (
     <header className='z-[999] relative'>
         <motion.div className='fixed top-0 left-1/2 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] rounded-none backdrop-blur-[0.5rem] border border-opacity-40 h-[4.5rem] w-full sm:top-6 sm:h-[3.5rem] sm:rounded-full sm:w-[36rem]'
@@ -29,7 +27,8 @@ export default function Header() {
                             <Link
                                 href={link.hash} 
                                 className={clsx('flex items-center decoration-none px-5 py-2 hover:text-gray-950', {
-                                    "text-gray-950": ActiveSectionContextObj?.activeSection === link.name
+                                    "text-gray-950": ActiveSectionContextObj?.activeSection === link.name,
+                                    "bg-gray-200 rounded-full": ActiveSectionContextObj?.activeSection === link.name
                                 })}
                                 onClick={() => ActiveSectionContextObj?.setActiveSection(link.name)}
                             >
