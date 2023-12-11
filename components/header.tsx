@@ -30,7 +30,10 @@ export default function Header() {
                                     "text-gray-950": ActiveSectionContextObj?.activeSection === link.name,
                                     "bg-gray-200 rounded-full": ActiveSectionContextObj?.activeSection === link.name
                                 })}
-                                onClick={() => ActiveSectionContextObj?.setActiveSection(link.name)}
+                                onClick={() => {
+                                    ActiveSectionContextObj?.setActiveSection(link.name);
+                                    ActiveSectionContextObj?.setTimeOfLastClick(Date.now());
+                                }}
                             >
                                 {link.name}
                             </Link>

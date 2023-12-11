@@ -14,10 +14,10 @@ export default function Projects() {
   });
 
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - ActiveSectionContextObj?.timeOfLastClick! > 1000 ) {
       ActiveSectionContextObj?.setActiveSection("Projects");
     }
-  }, [inView]);
+  }, [inView, ActiveSectionContextObj?.timeOfLastClick]);
 
   return (
     <section

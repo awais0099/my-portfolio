@@ -18,10 +18,10 @@ export default function Intro() {
   const ActiveSectionContextObj = useContext(ActiveSectionContext);
 
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - ActiveSectionContextObj?.timeOfLastClick! > 1000 ) {
       ActiveSectionContextObj?.setActiveSection("Home");
     }
-  }, [inView]);
+  }, [inView, ActiveSectionContextObj?.timeOfLastClick]);
 
   
   return (

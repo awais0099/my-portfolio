@@ -14,10 +14,10 @@ export default function About() {
   });
 
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - ActiveSectionContextObj?.timeOfLastClick! > 1000 ) {
       ActiveSectionContextObj?.setActiveSection("About");
     }
-  }, [inView]);
+  }, [inView, ActiveSectionContextObj?.timeOfLastClick]);
 
   return (
     <motion.section
